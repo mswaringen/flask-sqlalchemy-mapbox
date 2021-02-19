@@ -16,11 +16,7 @@ class School(db.Model):
 
 @app.route("/")
 def hello():
-    print("Total number of schools is", School.query.count())
-    school = School.query.filter_by(LOC_CODE='X270').first()
-    print("School's name is", school.SCHOOLNAME)
-
-    return render_template("index.html")
+    return render_template("index.html",count=90)
 
 @app.route("/shoelaces")
 def shoelaces():
